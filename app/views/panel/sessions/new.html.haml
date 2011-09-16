@@ -1,0 +1,9 @@
+= form_tag panel_sessions_path do
+  .form
+    Login
+    = text_field_tag :username, params[:username]
+    %br/
+    Hasło
+    = password_field_tag :password
+    %br/
+    = submit_tag "Zaloguj"

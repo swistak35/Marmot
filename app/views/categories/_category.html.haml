@@ -1,0 +1,8 @@
+%li.linkbook-category
+  = category.title.capitalize if category.visible?
+  %span.options
+    [#{link_to t(:edit), edit_category_url(category)}]
+    [#{link_to t(:destroy), category, :confirm => t(:are_you_sure), :method => :delete}]
+  %ul.linkbook-list.no-dots
+    = render category.categories
+    = render category.links

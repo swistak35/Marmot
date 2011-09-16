@@ -1,0 +1,3 @@
+$('#tag_name').val("")
+$('#tags').append("<%= escape_javascript(render @tag) %>")
+$('#post_tag_tokens').tokenInput("add", {id: <%=@tag.id%>, name: "<%=@tag.name%>"});

@@ -1,0 +1,8 @@
+= form_for([:files, @parcel], :html => {:multipart => true}) do |parcel_form|
+  .form
+    = parcel_form.file_field :parcel 
+    %br/
+    = parcel_form.text_field :tag_tokens, "data-pre" => @parcel.tags.map(&:attributes).to_json
+    = parcel_form.submit "Wyslij"
+    
+= render 'panel/tags/form'

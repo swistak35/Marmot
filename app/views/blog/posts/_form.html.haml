@@ -1,0 +1,22 @@
+= form_for([:blog, @post]) do |post_form|
+  .form
+    = post_form.text_field :title, :class => 'maxwidth'
+    %br/
+    = post_form.text_area :content, :class => 'maxwidth'
+    .col49{:style => "text-align: left;"}
+      = post_form.check_box :visible
+      = "Na głównej?"
+      %br/
+      = post_form.check_box :accessible
+      = "Dostępny?"
+      %br/
+      = post_form.check_box :commentable
+      = "Można komentować?"
+      %br/
+      = post_form.submit "Wyślij", :class => 'col49'
+      = post_form.submit "Podgląd", :class => 'col49'
+    .col49
+      = post_form.text_field :tag_tokens, "data-pre" => @post.tags.map(&:attributes).to_json
+      %br/
+      
+= render 'panel/tags/form'

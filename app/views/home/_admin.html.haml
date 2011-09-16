@@ -1,0 +1,32 @@
+%h2
+  Panel admina
+
+%h3
+  Akcje
+%ul
+  %li
+    = link_to "Tagi", panel_tags_path
+  %li
+    = link_to "Komentarze", root_path
+  %li
+    = link_to "Dodaj post", new_blog_post_path
+  %li
+    = link_to "Dodaj wydarzenie", new_calendar_event_path, :rel => "facebox"
+  %li
+    = link_to "Dodaj paczkę", new_files_parcel_path, :rel => "facebox"
+  %li
+    = link_to "Wyloguj się", panel_sessions_path, :method => 'destroy'
+
+%h3
+  Posty niewidoczne
+%ul
+  - Post.accessible.invisible.each do |post|
+    %li
+      = link_to post.title, [:blog, post]
+
+%h3
+  Posty niedostępne
+%ul
+  - Post.unaccessible.each do |post|
+    %li
+      = link_to post.title, [:blog, post]

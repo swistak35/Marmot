@@ -1,0 +1,58 @@
+!!!
+%html
+  %head
+    %title Swistak35's homepage
+    %meta{:content => "Świstak35's homepage", :name => "Description"}/
+    %meta{:content => "świstak35,swistak35,swistak,świstak,website,swistakraf,homepage,świstak35 homepage", :name => "Keywords"}/
+    %meta{:content => "Rafał 'Świstak35' Łasocha", :name => "Author"}/
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %meta{:content => "pl", "http-equiv" => "Content-Language"}/
+    = stylesheet_link_tag "main", "jquery.facebox.css"
+    = stylesheet_link_tag params[:controller]
+    = javascript_include_tag "jquery", "jquery_ujs", "main", "jquery.facebox.js"
+    = javascript_include_tag params[:controller]
+    - if current_admin
+      = stylesheet_link_tag "panel/admin"
+      = javascript_include_tag "panel/admin"
+    = csrf_meta_tag
+  %body
+    #wrapper
+      #left
+        - if current_admin
+          = render 'home/admin'
+        -else
+          #logo
+      #right
+        #info
+          %span#name Swistak35
+          #menu
+            %ul.menu
+              %li
+                = link_to "home", root_path
+              %li
+                = link_to "blog", blog_posts_path
+              %li
+                = link_to "microblog", my_subdomain_url("microblog")
+              %li
+                = link_to "portfolio", root_path
+              %li
+                = link_to "projects", projects_path
+              %li
+                = link_to "links", links_path
+              %li
+                = link_to "contact", contact_path
+              - if current_admin
+                %br/
+                %li
+                  = link_to "kalendarz", calendar_events_path
+                %li
+                  = link_to "paczki", files_parcels_path
+        #content
+          = yield
+        #footer
+          2010-2011 ©
+          %br/
+          Strona pod wezwaniem
+          %a{:href => "http://linuxpl.com/?npp=613"} Linuxpl.com
+          %br/
+          = render 'home/piwik'

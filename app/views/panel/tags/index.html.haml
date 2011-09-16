@@ -1,0 +1,13 @@
+.col49
+  = render 'form'
+  
+  %table{:style => "width: 100%", :id => 'tags'}
+    %tr
+      %th
+        Nazwa
+      %th
+        Posty
+      %th
+        Akcje
+      = render @tags
+.col49{:id => "tag-posts"}

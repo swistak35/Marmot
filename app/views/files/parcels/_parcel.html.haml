@@ -1,0 +1,13 @@
+#parcel{:id => "#{parcel.id}", :class => "rectangle tleft"}
+  .parcel-name
+    = link_to parcel.parcel_file_name, parcel.parcel.url
+  = parcel_content_type_icon(parcel.parcel_content_type)
+  %p.parcel-info
+    %span.parcel-size
+      = parcel_size_parser parcel.parcel_file_size
+    %span.parcel-tags
+      =raw tags_join parcel.tags
+  .parcel-date
+    = parcel.parcel_updated_at.strftime("%d/%m/%Y, %H:%M")
+    | 
+    = link_to "Usun", [:files, parcel], :method => 'delete', :remote => true

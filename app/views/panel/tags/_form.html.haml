@@ -1,0 +1,3 @@
+= form_for([:panel, @tag], :remote => true) do |tag_form|
+  = tag_form.text_field :name, :style => 'width: 160px;'
+  = tag_form.submit "Utworz tag", :style => 'width: 110px;'

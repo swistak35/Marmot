@@ -1,0 +1,12 @@
+= form_for([:calendar, @event]) do |f|
+  .form
+    = f.text_field :name, :class => 'maxwidth'
+    %br/
+    = f.text_area :desc, :class => 'maxwidth', :style => 'height: 100px;'
+    %br/
+    %div{:style => 'width: 33%; display: inline; text-align: left'}
+      Całodniowe?
+      = f.check_box :allday
+    = f.text_field :when, :value => Time.now.strftime("%Y/%m/%d, %H:%M"), :style => 'width: 33%'
+    = f.submit "Wyślij", :style => 'width: 33%'
+    

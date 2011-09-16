@@ -1,0 +1,67 @@
+//= require coderay
+
+.post-date {
+  font-style: italic;
+  font-size: 10pt;
+  margin: 2px;
+}
+
+.post-title {
+  margin: 2px;
+  a {
+    color: #260033;
+    font-weight: bold;
+  }
+}
+
+.post-content {
+  font-family: 'Comfortaa';
+  a {
+    text-decoration: underline overline;
+    &:hover, &:active {
+      text-decoration: none;
+    }
+  }
+}
+
+.post-tags {
+  font-size: 10pt;
+}
+
+.post {
+  display:block;
+  margin-top:10px;
+  margin-bottom:10px;
+  float: left;
+  width: 608px;
+  border: 3px double #000000;
+  background-color: #BCE27F;
+  padding: 5px;
+}
+
+.comment-author {
+  font-size: 15pt;
+  font-style: italic;
+  font-weight: bold;
+  text-align: left;
+  margin-bottom: 12px;
+  float: left;
+  width: 100%;
+}
+
+.comment-avatar {
+  margin-right: 10px;
+}
+
+.comment-info {
+  text-align: right;
+  font-size: 11pt;
+}
+
+.comment-content {
+  font-size: 11pt;
+}
+
+form .comment-content {
+  height: 150px;
+}

@@ -1,0 +1,12 @@
+#comment{:id => "#{comment.id}", :class => "rectangle tleft"}
+  .comment-author
+    = image_tag gravatar_url(comment.email), :class => 'comment-avatar'
+    = link_to comment.commenter, comment.www
+    - if current_admin
+      (#{comment.email})
+  %p.comment-content
+    = comment.content
+  - if current_admin
+    %p.comment-info
+      = link_to "Usun", [:blog, comment.post, comment], :confirm => "Jestes pewien?", :method => 'delete', :remote => true
+      

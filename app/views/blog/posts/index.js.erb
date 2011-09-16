@@ -1,0 +1,5 @@
+$('#tag-posts').html("<br/><br/>")
+
+<% @posts.each do |post| %>
+  $('#tag-posts').append("<%= escape_javascript(link_to post.title, post) %><br/>")
+<% end %>

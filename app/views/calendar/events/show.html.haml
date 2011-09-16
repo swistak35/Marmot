@@ -1,0 +1,10 @@
+%p
+  %i
+    = @event.when.strftime("%Y/%m/%d, %H:%M")
+  %br/
+  %strong
+    = @event.name
+%p
+  = @event.desc
+%p
+  = link_to "Usun", [:calendar, @event], :method => 'delete', :remote => true

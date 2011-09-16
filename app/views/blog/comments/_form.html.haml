@@ -1,0 +1,15 @@
+.rectangle{:class => "tleft"}
+  = form_for([:blog, @post, @post.comments.build]) do |f|
+    .form
+      = f.text_field :commenter, :class => 'content-commenter'
+      = f.label "Autor"
+      %br/
+      = f.text_field :www, :class => 'content-www'
+      = f.label "WWW (opcjonalnie)"
+      %br/
+      = f.text_field :email, :class => 'content-email'
+      = f.label "E-mail"
+      %br/
+      = f.text_area :content, :class => 'maxwidth comment-content'
+      %br/
+      = f.submit "Wyslij"

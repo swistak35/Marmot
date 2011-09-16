@@ -1,0 +1,33 @@
+#linksroll {
+  width: 124px;
+  float: right;
+  text-align: right;
+  line-height: 20px;
+  padding-right: 10px;
+  
+  ul {
+    list-style: none;
+  }
+  
+  li a {
+    text-decoration: dashed;
+    color: #225411;
+    &:hover {
+      text-decoration: underline;
+      color: #115422;
+    }
+  }
+}
+
+#social-icons {
+  width: 400px;
+  float: left;
+}
+
+.icon {
+  width: 48px;
+  height: 48px;
+  padding: 16px;
+  display: inline;
+  float: left;
+}

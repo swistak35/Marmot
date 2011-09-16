@@ -1,0 +1,36 @@
+.CodeRay {
+  background-color: #2B2B2B;
+  border: 1px solid black;
+  font-family: 'Inconsolata', 'Courier New', 'Terminal', monospace;
+  color: #E6E0DB;
+  padding: 3px 5px;
+  overflow: auto;
+  font-size: 12px;
+  margin: 12px 0;
+  width: 100%;
+}
+
+.CodeRay pre {
+  margin: 0px;
+  padding: 0px;
+}
+
+.CodeRay tt {
+  margin: 0px;
+  padding: 0px;
+  width: 0px;
+}
+
+.CodeRay { color:#eeeeee } /* default */
+.CodeRay .c  { color:#BC9458; font-style: italic; } /* commentline */
+.CodeRay .s  { color:#A5C261 } /* string */
+.CodeRay .sy { color:#6D9CBE } /* symbol */
+.CodeRay .gv { color:#FF7357 } /* global */
+.CodeRay .iv { color:#D0D0FF; font-style: italic; } /* instancevar */
+.CodeRay .rx { color:#AAFF57 } /* regex */
+.CodeRay .cv { color:#B37FD3; font-weight: bold; font-style: italic; } /* classvar */
+.CodeRay .fl { color:#A5C261 } /* float */
+.CodeRay .i  { color:#A5C261 } /* integer */
+.CodeRay .r  { color:#CC7833; font-weight: bold; } /* keyword */
+.CodeRay .cl { color:#FFFFFF; font-weight: bold; } /* classname */
+.CodeRay .fu { color:#FFC66D; font-weight: bold; } /* defname */

@@ -1,0 +1,17 @@
+!!!
+%html
+  %head
+    %title Swistak35's homepage
+    %meta{:content => "Świstak35's homepage", :name => "Description"}/
+    %meta{:content => "świstak35,swistak35,swistak,świstak,website,swistakraf,homepage,świstak35 homepage", :name => "Keywords"}/
+    %meta{:content => "Rafał 'Świstak35' Łasocha", :name => "Author"}/
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %meta{:content => "pl", "http-equiv" => "Content-Language"}/
+    = javascript_include_tag "jquery", "jquery_ujs", "main"
+    = javascript_include_tag params[:controller]
+    - if current_admin
+      = stylesheet_link_tag "panel/admin"
+      = javascript_include_tag "panel/admin"
+    = csrf_meta_tag
+  %body
+    = yield

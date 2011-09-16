@@ -1,0 +1,42 @@
+.parcel {
+  display: block;
+  border: black 1px solid;
+  width: 480px;
+  margin-left: auto;
+  margin-right: auto;
+  height: 100px;
+  margin-bottom: 20px;
+}
+
+.parcel-name {
+  clear: both;
+  height: 19px;
+  text-align: center;
+  border-bottom: black 1px solid;
+}
+
+.parcel-icon {
+  width: 80px;
+  height: 80px;
+  float: left;
+  clear: left;
+}
+
+.parcel-info {
+  width: 400px;
+  clear: right;
+}
+
+.parcel-topic {
+  width: 200px;
+  float: left;
+}
+
+.parcel-size {
+  width: 200px;
+}
+
+.parcel-date {
+  width: 400px;
+  clear: right;
+}

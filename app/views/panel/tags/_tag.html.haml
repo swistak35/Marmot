@@ -1,0 +1,8 @@
+%tr{:id => "tag_#{tag.id}"}
+  %td
+    = link_to tag.name, blog_tag_posts_url(tag.name)
+  %td
+    = tag.posts.count
+  %td
+    = link_to "Usun", [:panel, tag], :confirm => "Jestes pewien?", :remote => true, :method => 'delete'
+    = link_to "Posty", blog_tag_posts_url(tag.name), :remote => true

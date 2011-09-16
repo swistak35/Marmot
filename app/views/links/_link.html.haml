@@ -1,0 +1,5 @@
+%li.linkbook-link
+  = link_to link.title, link.url
+  %span.options
+    [#{link_to t(:edit), edit_link_path(link)}]
+    [#{link_to t(:destroy), link, :confirm => t(:are_you_sure), :method => :delete}]

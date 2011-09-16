@@ -1,0 +1,13 @@
+.post
+  %p.post-date
+    = post.created_at.strftime("%e %B %Y, %k:%M")
+  %h3.post-title
+    = link_to raw(post.title), [:blog, post]
+  = markdown(post.content)
+  %p.post-tags
+    = "Tagi"
+    \: #{raw tags_join post.tags}
+  - if current_admin
+    = link_to "Edytuj", edit_blog_post_path(post)
+    |
+    = link_to "Usuń", [:blog, post], :confirm => "Jesteś pewien?", :method => 'delete'

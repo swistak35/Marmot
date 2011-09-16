@@ -1,0 +1,7 @@
+= render @post
+
+-if @post.comments.count > 0
+  = render @post.comments
+
+-if @post.commentable?
+  = render "blog/comments/form"
