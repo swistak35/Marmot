@@ -1,11 +1,11 @@
 --- 
 address: swistak35.bshellz.pl
-pid: /home/manager/www/shelle.me/application/thin.pid
+pid: /home/swistak35/www/swistak35.bshellz.pl/application/thin.pid
 port: 80
-socket: /home/manager/www/shelle.me/application/thin.sock
+socket: /home/swistak35/www/swistak35.bshellz.pl/application/thin.sock
 wait: 30
 timeout: 30
-log: /home/manager/www/shelle.me/logs/thin.log
+log: /home/swistak35/www/swistak35.bshellz.pl/logs/thin.log
 max_conns: 1024
 require: []
 
@@ -13,4 +13,4 @@ environment: production
 max_persistent_conns: 512
 servers: 1
 daemonize: true
-chdir: /home/manager/panel/current
+chdir: /home/manager/swistak35/current

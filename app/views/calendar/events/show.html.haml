@@ -7,4 +7,4 @@
 %p
   = @event.desc
 %p
-  = link_to "Usun", [:calendar, @event], :method => 'delete', :remote => true
+  = button_to "Usun", [:calendar, @event], :method => 'delete', :remote => true

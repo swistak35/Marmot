@@ -2,7 +2,10 @@
   %td
     = link_to tag.name, blog_tag_posts_url(tag.name)
   %td
-    = tag.posts.count
+    = link_to tag.posts.count, blog_tag_posts_url(tag.name), :remote => true
+  %td
+    = link_to tag.parcels.count, files_tag_parcels_url(tag.name), :remote => true
   %td
     = link_to "Usun", [:panel, tag], :confirm => "Jestes pewien?", :remote => true, :method => 'delete'
-    = link_to "Posty", blog_tag_posts_url(tag.name), :remote => true
+    
+    

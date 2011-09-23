@@ -1,7 +1,7 @@
 source 'http://rubygems.org'
 
 #Base
-gem 'rails', '3.1.0'
+gem 'rails', '3.1.0.rc5'
 gem 'sqlite3'
 gem 'haml'
 gem 'jquery-rails'
@@ -16,7 +16,7 @@ gem 'table_builder', '0.0.3', :git => 'git://github.com/jchunky/table_builder.gi
 gem 'paperclip'
 
 group :assets do
-  gem 'sass-rails', "~> 3.1.0"
+  gem 'sass-rails', "~> 3.1.0.rc"
 end
 
 group :test do

@@ -7,6 +7,11 @@ module Files
         @tag = Tag.find_by_name(params[:tag])
         @parcels = @tag.parcels
       end
+      
+      respond_to do |format|
+        format.html
+        format.js
+      end
     end
     
     def type

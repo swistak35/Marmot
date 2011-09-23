@@ -3,8 +3,6 @@
     = link_to "<", :month => (@date.beginning_of_month-1).strftime("%Y/%m")
     = @date.strftime("%B %Y")
     = link_to ">", :month => (@date.end_of_month+1).strftime("%Y/%m")
-  %h3
-    = link_to "Dodaj wydarzenie", new_calendar_event_path, :rel => "facebox"
   = calendar_for @events, :year => @date.year, :month => @date.month do |calendar|
     = calendar.head('Niedziela', 'Poniedziałek', 'Wtorek', 'Środa', 'Czwartek', 'Piątek', 'Sobota')
     = calendar.day(:day_method => :when) do |date, events|

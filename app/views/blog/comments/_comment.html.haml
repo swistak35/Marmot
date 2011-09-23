@@ -1,10 +1,14 @@
 #comment{:id => "#{comment.id}", :class => "rectangle tleft"}
   .comment-author
     = image_tag gravatar_url(comment.email), :class => 'comment-avatar'
-    = link_to comment.commenter, comment.www
-    - if current_admin
-      (#{comment.email})
-  %p.comment-content
+    .comment-author-text
+      .comment-date
+        = comment.created_at.strftime("%e %B %Y, %k:%M")
+      = link_to comment.commenter, comment.www
+      napisał:
+      - if current_admin
+        (#{comment.email})
+  .comment-content
     = comment.content
   - if current_admin
     %p.comment-info

@@ -11,11 +11,12 @@ class Comment < ActiveRecord::Base
   before_create :sanitize_www
   
   def sanitize_www
-    self.www = (self.www =~ %r[^http://]) ? self.www : "http://" + self.www unless self.www.empty?
+    (self.www = (self.www =~ %r[^http://]) ? self.www : "http://" + self.www) unless self.www.blank?
   end
   
   def post_commentable_must_be_true
-    errors.add("", "Nie mozna komentowac") unless
-      self.post.commentable?
+    if !self.post || !self.post.commentable?
+      errors.add("", "Nie mozna komentowac")
+    end
   end
 end

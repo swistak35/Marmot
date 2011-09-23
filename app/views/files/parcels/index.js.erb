@@ -1,0 +1,5 @@
+$('#tag-contents').html("<br/><br/>")
+
+<% @parcels.each do |parcel| %>
+  $('#tag-contents').append("<%= escape_javascript(link_to parcel.parcel_file_name, [:files, parcel]) %><br/>")
+<% end %>

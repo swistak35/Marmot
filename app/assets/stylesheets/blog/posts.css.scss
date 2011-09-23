@@ -42,15 +42,23 @@
 .comment-author {
   font-size: 15pt;
   font-style: italic;
-  font-weight: bold;
   text-align: left;
   margin-bottom: 12px;
   float: left;
   width: 100%;
+  display: block;
+  height: 48px;
+  vertical-align: middle;
+}
+
+.comment-date {
+  font-size: 10pt;
 }
 
 .comment-avatar {
   margin-right: 10px;
+  float: left;
+  display: block;
 }
 
 .comment-info {
